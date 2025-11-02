@@ -1,1 +1,1 @@
-# Python
+A curated collection of Python scripts, concept demos, and mini-projects from my journey as an AI & Data Science student. PythonVerse is my personal space to explore programming logic, strengthen core Python skills, and document insights for future reference and collaboration.
