@@ -1,0 +1,112 @@
+
+# 1. VARIABLES
+
+# Assigning values to variables
+name = "Karunya"        # string
+id = 01               # integer
+score = 90.56          # float
+is_student = True       # boolean
+
+
+x = 10          # x is an integer
+x = "Hello"     # now x becomes a string
+
+print("Name:", name)
+print("Age:", age)
+print("Height:", height)
+print("Is Student:", is_student)
+print("Dynamic Variable x:", x)
+
+
+# 2. PYTHON DATA TYPES WITH EXAMPLES
+
+# A. Numeric Data Types
+
+
+# Integer
+count = 100
+year = 2025
+
+# Float
+temperature = 36.7
+
+# Complex
+z = 5 + 3j
+
+print("\nNumeric Data Types:")
+print("Integer:", count)
+print("Float:", temperature)
+print("Complex Number:", z)
+
+
+# B. String Data Type
+
+text = "Python is powerful"
+city = 'Coimbatore'
+
+print("\nString Data Types:")
+print(text)
+print(city)
+
+
+
+# C. Boolean Data Type
+
+is_active = True
+is_verified = False
+
+print("\nBoolean Data Types:")
+print("Active:", is_active)
+print("Verified:", is_verified)
+
+# D. Sequence Data Types
+
+
+# List → Mutable (can change)
+fruits = ["Apple", "Banana", "Orange"]
+marks = [45, 67, 89]
+
+# Tuple → Immutable (cannot change)
+dimensions = (1920, 1080)
+
+# Range → Sequence of numbers
+numbers = range(1, 6)
+
+print("\nSequence Data Types:")
+print("List:", fruits)
+print("Tuple:", dimensions)
+print("Range:", list(numbers))
+
+
+# E. Mapping Data Type
+
+
+# Dictionary → Key-value pairs
+student = {
+    "name": "Arun",
+    "age": 21,
+    "department": "CSE"
+}
+
+print("\nMapping Data Type:")
+print("Dictionary:", student)
+
+
+# F. Set Data Types
+
+
+unique_ids = {101, 102, 103, 101}  # duplicate removed
+frozen_ids = frozenset([1, 2, 3])
+
+print("\nSet Data Types:")
+print("Set:", unique_ids)
+print("Frozen Set:", frozen_ids)
+
+
+# G. None Type
+
+result = None
+
+print("\nNone Type:")
+print("Result:", result)
+
