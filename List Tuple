@@ -1,0 +1,45 @@
+
+
+# LISTS IN PYTHON
+# Lists are mutable (changeable) and ordered collections.
+
+# Creating a list
+fruits = ["apple", "banana", "mango"]
+print("Original List:", fruits)
+
+# Adding an item
+fruits.append("orange")
+print("After append:", fruits)
+
+# Removing an item
+fruits.remove("banana")
+print("After remove:", fruits)
+
+# Accessing elements
+print("First fruit:", fruits[0])
+
+# Looping through a list
+print("List items:")
+for fruit in fruits:
+    print("-", fruit)
+
+
+# TUPLES IN PYTHON
+
+# Tuples are immutable (cannot be changed) and ordered collections.
+
+# Creating a tuple
+colors = ("red", "green", "blue")
+print("\nTuple:", colors)
+
+# Accessing elements
+print("Second color:", colors[1])
+
+# Tuples are often used for fixed data
+person = ("alice", 22, "Coimbatore")
+print("Person Tuple:", person)
+
+# Looping through a tuple
+print("Tuple items:")
+for color in colors:
+    print("-", color)
