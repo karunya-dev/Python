@@ -1,0 +1,97 @@
+# 1) IF - ELIF - ELSE
+value = 75
+
+print("IF / ELIF / ELSE EXAMPLE")
+
+if value > 90:
+    print("Grade: A")
+elif value >= 75:
+    print("Grade: B")
+elif value >= 50:
+    print("Grade: C")
+else:
+    print("Grade: Fail")
+
+
+file_size_mb = 120
+if file_size_mb > 100:
+    print("Large file - move to big-data pipeline")
+else:
+    print("Small file - normal ETL pipeline")
+
+
+ḍ
+# 2) LOOPS (for & while)
+
+
+print("\nLOOPS EXAMPLES")
+
+# For loop – iterating over a list of columns
+columns = ["id", "age", "salary", "active"]
+for col in columns:
+    print("Processing column:", col)
+
+
+# For loop – range example
+for i in range(1, 6):
+    print("Row number:", i)
+
+# While loop – simple counter
+counter = 1
+while counter <= 3:
+    print("Counter =", counter)
+    counter += 1
+
+
+
+# 3) BREAK & CONTINUE
+
+
+print("\nBREAK & CONTINUE EXAMPLES")
+
+numbers = [10, 25, 0, 50, 75]
+
+# Break example
+for n in numbers:
+    if n == 0:
+        print("Found zero… stopping loop.")
+        break
+    print("Processing:", n)
+
+# Continue example 
+    if n < 20:
+        continue 
+    print("Kept value:", n)
+
+
+
+# 4) TRY - EXCEPT BLOCK
+
+
+print("\nTRY - EXCEPT EXAMPLES")
+
+# Basic try-except
+try:
+    result = 10 / 0  
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero!")
+
+# Multiple exception handling
+data = {"id": 101}
+
+try:
+    print(data["salary"])
+except KeyError:
+    print("KeyError: 'salary' not found.")
+
+#Example:
+try:
+    with open("sample_data.csv", "r") as f:
+        print("File loaded successfully")
+except FileNotFoundError:
+    print("File missing - trigger data ingestion alert.")
+
+
+
+
+
