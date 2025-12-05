@@ -1,0 +1,101 @@
+# 1) Arithmetic operators
+
+a = 10
+b = 3
+
+print("ARITHMETIC")
+print("a + b =", a + b)      # 13
+print("a - b =", a - b)      # 7
+print("a * b =", a * b)      # 30
+print("a / b =", a / b)      # 3.333...
+print("a // b (floor div) =", a // b)  # 3
+print("a % b =", a % b)      # 1
+print("a ** b (power) =", a ** b)  # 1000
+
+# 2) Comparison operators
+
+print("\nCOMPARISON")
+print("a == b ->", a == b)
+print("a != b ->", a != b)
+print("a > b  ->", a > b)
+print("a <= b ->", a <= b)
+
+
+# 3) Logical operators
+
+x = True
+y = False
+print("\nLOGICAL")
+print("x and y ->", x and y)
+print("x or y  ->", x or y)
+print("not x   ->", not x)
+
+
+age = 30
+salary = 120000
+is_senior_analyst = (age > 28) and (salary > 100000)
+print("is_senior_analyst:", is_senior_analyst)
+
+
+# 4) Assignment & Augmented
+
+count = 0
+count += 5   
+count *= 2   
+print("\nASSIGNMENT")
+print("count after += and *= :", count)
+
+
+# 5) Bitwise
+
+
+flags_a = 0b1010   # 10
+flags_b = 0b1100   # 12
+
+print("\nBITWISE")
+print("flags_a & flags_b ->", bin(flags_a & flags_b))  # intersection of flags
+print("flags_a | flags_b ->", bin(flags_a | flags_b))  # union of flags
+print("flags_a ^ flags_b ->", bin(flags_a ^ flags_b))  # differing bits
+print("~flags_a ->", bin(~flags_a))                     # bitwise NOT (two's complement)
+
+
+n = 8
+print("n << 1 ->", n << 1)  # 16
+print("n >> 2 ->", n >> 2)  # 2
+
+
+# 6) Membership operators
+
+print("\nMEMBERSHIP")
+sample_list = ['id','name','age','salary']
+print("'age' in sample_list ->", 'age' in sample_list)
+print("'address' not in sample_list ->", 'address' not in sample_list)
+
+
+
+# 7) Identity operators
+
+print("\nIDENTITY")
+a_list = [1,2,3]
+b_list = a_list
+c_list = [1,2,3]
+print("a_list is b_list ->", a_list is b_list)   # True (same object)
+print("a_list is c_list ->", a_list is c_list)   # False (equal but different object)
+print("a_list == c_list ->", a_list == c_list)   # True (value equality)
+
+
+# 8) Ternary operator
+
+status = "large" if a > 100 else "small"
+print("\nTERNARY")
+print("status =", status)
+
+
+# 9) Operator precedence
+
+
+result = 1 + 2 * 3 
+result_with_paren = (1 + 2) * 3  # 9
+print("\nPRECEDENCE")
+print("1 + 2 * 3 =", result)
+print("(1 + 2) * 3 =", result_with_paren)
