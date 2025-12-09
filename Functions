@@ -1,0 +1,53 @@
+ 1. BASIC FUNCTION
+
+def greet():
+    print("Hello! Welcome to Python Functions.")
+
+2. FUNCTION WITH PARAMETERS
+
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(10, 20)
+print("Addition:", result)
+
+3. DEFAULT ARGUMENTS
+
+def multiply(a, b=2):
+    return a * b
+
+print("Multiply with default b:", multiply(5))      
+print("Multiply with custom b:", multiply(5, 4))
+
+ 4. VARIABLE LENGTH ARGUMENTS (*args, **kwargs)
+
+def sum_all(*numbers):
+    return sum(numbers)
+
+print("Sum of all numbers:", sum_all(3, 5, 7, 10))
+
+def user_details(**info):
+    for key, value in info.items():
+        print(f"{key}: {value}")
+
+user_details(name="Karunya", role="Data Analyst")
+
+5. RETURNING MULTIPLE VALUES
+
+def calculate(a, b):
+    add = a + b
+    sub = a - b
+    mul = a * b
+    return add, sub, mul
+
+a, s, m = calculate(10, 4)
+print("Add:", a, "Subtract:", s, "Multiply:", m)
+
+6. LAMBDA FUNCTIONS
+
+
+square = lambda x: x * x
+print("Square:", square(6))
+
+add_three = lambda a, b, c: a + b + c
+print("Add three:", add_three(1, 2, 3))
