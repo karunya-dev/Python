@@ -1,0 +1,40 @@
+import pandas as pd
+import sqlite3
+
+# Sample DataFrame
+df = pd.DataFrame({
+    "Name": ["Alice", "Bob", "Charlie"],
+    "Age": [25, 30, 35]
+})
+
+
+# 1. Reading & Writing CSV Files
+-
+
+df.to_csv("data.csv", index=False)     # Write CSV
+read_csv = pd.read_csv("data.csv")     # Read CSV
+print("\nCSV Output:\n", read_csv)
+
+
+# 2. Reading & Writing Excel Files
+
+df.to_excel("data.xlsx", index=False)  # Write Excel
+read_excel = pd.read_excel("data.xlsx")# Read Excel
+print("\nExcel Output:\n", read_excel)
+
+
+# 3. Reading & Writing SQL Databases
+
+conn = sqlite3.connect("data.db")         # Create SQLite DB
+df.to_sql("people", conn, index=False, if_exists="replace")   # Write table
+
+read_sql = pd.read_sql("SELECT * FROM people", conn)          # Read table
+print("\nSQL Output:\n", read_sql)
+
+conn.close()
+
+# 4. Reading & Writing JSON Files
+
+df.to_json("data.json", orient="records")   # Write JSON
+read_json = pd.read_json("data.json")       # Read JSON
+print("\nJSON Output:\n", read_json)
