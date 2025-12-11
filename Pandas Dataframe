@@ -1,0 +1,83 @@
+import pandas as pd
+
+# 1. Creating DataFrames
+
+df = pd.DataFrame({
+    "Name": ["Alice", "Bob", "Charlie"],
+    "Age": [25, 30, 35],
+    "City": ["Mumbai", "Delhi", "Chennai"]
+})
+
+print("DataFrame:\n", df)
+
+# 2. Accessing / Filtering Data
+
+print("\nSelect Column:")
+print(df["Name"])
+
+print("\nFilter: Age > 25")
+print(df[df["Age"] > 25])
+
+# 3. Adding & Removing Columns
+
+
+df["Age + 10"] = df["Age"] + 10
+print("\nAfter Adding Column:")
+print(df)
+
+df = df.drop(columns=["City"])
+print("\nAfter Dropping Column:")
+print(df)
+
+
+# 4. Merging & Joining
+
+
+salary_df = pd.DataFrame({
+    "Name": ["Alice", "Bob", "Charlie"],
+    "Salary": [50000, 60000, 70000]
+})
+
+merged = pd.merge(df, salary_df, on="Name", how="inner")
+print("\nMerged DataFrame:")
+print(merged)
+
+
+# 5. Grouping & Aggregation
+
+
+sales_df = pd.DataFrame({
+    "Name": ["Alice", "Alice", "Bob", "Charlie"],
+    "Sales": [200, 300, 150, 500]
+})
+
+grouped = sales_df.groupby("Name")["Sales"].sum()
+print("\nTotal Sales per Person:")
+print(grouped)
+
+
+# 6. Pivot Table
+
+
+pivot_df = pd.DataFrame({
+    "Name": ["Alice", "Alice", "Bob"],
+    "Month": ["Jan", "Feb", "Jan"],
+    "Sales": [200, 300, 150]
+})
+
+pivot = pivot_df.pivot_table(values="Sales", index="Name", columns="Month", fill_value=0)
+print("\nPivot Table:")
+print(pivot)
+
+# 7. Input / Output (CSV, Excel, JSON)
+
+# CSV
+df.to_csv("people.csv", index=False)
+
+# Excel
+df.to_excel("people.xlsx", index=False)
+
+# JSON
+df.to_json("people.json", orient="records")
+
+print("\nFiles Saved: people.csv, people.xlsx, people.json")
